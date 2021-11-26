@@ -416,8 +416,8 @@ namespace My_Project
         }
         private void tVDSeismicToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Form Form2 = new My_Project.Form2();
-            //Form2.Show();
+            Form Form2 = new My_Project.Form2();
+            Form2.Show();
         }
 
         
