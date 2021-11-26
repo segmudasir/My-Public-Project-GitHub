@@ -350,6 +350,7 @@
             this.timeShiftSeismicToolStripMenuItem.Name = "timeShiftSeismicToolStripMenuItem";
             this.timeShiftSeismicToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.timeShiftSeismicToolStripMenuItem.Text = "Time Shift Seismic";
+            this.timeShiftSeismicToolStripMenuItem.Click += new System.EventHandler(this.timeShiftSeismicToolStripMenuItem_Click);
             // 
             // timeShiftFromWellLogsToolStripMenuItem
             // 

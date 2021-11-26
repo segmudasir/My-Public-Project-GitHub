@@ -427,12 +427,14 @@ namespace My_Project
             //Form11.Show();
         }
 
-
-       /* private void timeShiftSeismicToolStripMenuItem_Click(object sender, EventArgs e)
+        private void timeShiftSeismicToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form3 = new My_Project.Form3();
             Form3.Show();
         }
+
+
+       /* 
         private void timeShiftFromWellLogsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form4 = new My_Project.Form4();
