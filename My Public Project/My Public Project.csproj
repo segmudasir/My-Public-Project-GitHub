@@ -80,6 +80,12 @@
     <Compile Include="Time Shift Seismic.designer.cs">
       <DependentUpon>Time Shift Seismic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Time Shift Well Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time Shift Well Logs.designer.cs">
+      <DependentUpon>Time Shift Well Logs.cs</DependentUpon>
+    </Compile>
     <Compile Include="TVD Seismic.cs" />
     <Compile Include="TVD Seismic.designer.cs">
       <DependentUpon>TVD Seismic.cs</DependentUpon>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="Time Shift Seismic.resx">
       <DependentUpon>Time Shift Seismic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Time Shift Well Logs.resx">
+      <DependentUpon>Time Shift Well Logs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TVD Seismic.resx">
       <DependentUpon>TVD Seismic.cs</DependentUpon>

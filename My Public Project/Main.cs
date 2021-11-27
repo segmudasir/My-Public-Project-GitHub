@@ -433,13 +433,18 @@ namespace My_Project
             Form3.Show();
         }
 
-
-       /* 
         private void timeShiftFromWellLogsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form4 = new My_Project.Form4();
             Form4.Show();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        /* 
         private void TimeDepthChartsDepthToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form5 = new My_Project.Form5();

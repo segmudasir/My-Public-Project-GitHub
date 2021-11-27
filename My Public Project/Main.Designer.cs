@@ -357,6 +357,7 @@
             this.timeShiftFromWellLogsToolStripMenuItem.Name = "timeShiftFromWellLogsToolStripMenuItem";
             this.timeShiftFromWellLogsToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.timeShiftFromWellLogsToolStripMenuItem.Text = "Time Shift from Well logs";
+            this.timeShiftFromWellLogsToolStripMenuItem.Click += new System.EventHandler(this.timeShiftFromWellLogsToolStripMenuItem_Click);
             // 
             // linearInterpolationToolStripMenuItem
             // 
@@ -495,6 +496,7 @@
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
