@@ -439,9 +439,10 @@ namespace My_Project
             Form4.Show();
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void linearInterpolationToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+            Form Form6 = new My_Project.Form6();
+            Form6.Show();
         }
         
         /* 
@@ -450,11 +451,7 @@ namespace My_Project
             Form Form5 = new My_Project.Form5();
             Form5.Show();
         }
-        private void linearInterpolationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form6 = new My_Project.Form6();
-            Form6.Show();
-        }
+        
 
         private void dBaseMapToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -364,6 +364,7 @@
             this.linearInterpolationToolStripMenuItem.Name = "linearInterpolationToolStripMenuItem";
             this.linearInterpolationToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.linearInterpolationToolStripMenuItem.Text = "Linear Interpolation";
+            this.linearInterpolationToolStripMenuItem.Click += new System.EventHandler(this.linearInterpolationToolStripMenuItem_Click_1);
             // 
             // timeDepthChartsTimeToolStripMenuItem
             // 
@@ -496,7 +497,7 @@
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
+            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

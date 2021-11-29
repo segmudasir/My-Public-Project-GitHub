@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Linear Interpolation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Linear Interpolation.designer.cs">
+      <DependentUpon>Linear Interpolation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="TVD Seismic.designer.cs">
       <DependentUpon>TVD Seismic.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Linear Interpolation.resx">
+      <DependentUpon>Linear Interpolation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
