@@ -371,6 +371,7 @@
             this.timeDepthChartsTimeToolStripMenuItem.Name = "timeDepthChartsTimeToolStripMenuItem";
             this.timeDepthChartsTimeToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.timeDepthChartsTimeToolStripMenuItem.Text = "Time Depth Charts - Time";
+            this.timeDepthChartsTimeToolStripMenuItem.Click += new System.EventHandler(this.timeDepthChartsTimeToolStripMenuItem_Click);
             // 
             // TimeDepthChartsDepthToolStripMenuItem
             // 
@@ -497,7 +498,6 @@
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Main";
-            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

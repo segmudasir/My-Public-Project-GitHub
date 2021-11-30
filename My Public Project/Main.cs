@@ -444,6 +444,12 @@ namespace My_Project
             Form Form6 = new My_Project.Form6();
             Form6.Show();
         }
+
+        private void timeDepthChartsTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form13 = new My_Project.Form13();
+            Form13.Show();
+        }
         
         /* 
         private void TimeDepthChartsDepthToolStripMenuItem_Click(object sender, EventArgs e)
@@ -479,13 +485,7 @@ namespace My_Project
         {
             Form Form12 = new My_Project.Form12();
             Form12.Show();
-        }     
-        private void TimeDepthChartsTimeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form13 = new My_Project.Form13();
-            Form13.Show();
-        }
-       
+        }            
         private void tectonicsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Form Form14 = new My_Project.Form14();

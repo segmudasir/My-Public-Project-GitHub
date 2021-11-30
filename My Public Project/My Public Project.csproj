@@ -80,6 +80,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Time Depth Charts - Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time Depth Charts - Time.designer.cs">
+      <DependentUpon>Time Depth Charts - Time.cs</DependentUpon>
+    </Compile>
     <Compile Include="Time Shift Seismic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Time Depth Charts - Time.resx">
+      <DependentUpon>Time Depth Charts - Time.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Time Shift Seismic.resx">
       <DependentUpon>Time Shift Seismic.cs</DependentUpon>
     </EmbeddedResource>
