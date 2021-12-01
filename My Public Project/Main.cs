@@ -450,125 +450,127 @@ namespace My_Project
             Form Form13 = new My_Project.Form13();
             Form13.Show();
         }
-        
-        /* 
+
         private void TimeDepthChartsDepthToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form5 = new My_Project.Form5();
             Form5.Show();
         }
-        
+       
+         
+       
+        /*
 
-        private void dBaseMapToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form7 = new My_Project.Form7();
-            Form7.Show();       
-        }
+       private void dBaseMapToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form7 = new My_Project.Form7();
+           Form7.Show();       
+       }
                 
-        private void convolution5X5ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form8 = new My_Project.Form8();
-            Form8.Show();
-        }
+       private void convolution5X5ToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form8 = new My_Project.Form8();
+           Form8.Show();
+       }
 
-        private void mediumConvolutionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form9 = new My_Project.Form9();
-            Form9.Show();
-        }
-        private void advanceConvolutionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form10 = new My_Project.Form10();
-            Form10.Show();
-        }        
-        private void shueyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form12 = new My_Project.Form12();
-            Form12.Show();
-        }            
-        private void tectonicsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Form Form14 = new My_Project.Form14();
-            //Form14.Show();
-        }
-        //Form 15 Extra form added for Tectonic Subsidence Graph.
-        private void porosityToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form16 = new My_Project.Form16();
-            Form16.Show();
-        }
-        private void minMaxFinderToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Form Form17 = new My_Project.Form17();
-            Form17.Show();
-        }
+       private void mediumConvolutionToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form9 = new My_Project.Form9();
+           Form9.Show();
+       }
+       private void advanceConvolutionToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form10 = new My_Project.Form10();
+           Form10.Show();
+       }        
+       private void shueyToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form12 = new My_Project.Form12();
+           Form12.Show();
+       }            
+       private void tectonicsToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           //Form Form14 = new My_Project.Form14();
+           //Form14.Show();
+       }
+       //Form 15 Extra form added for Tectonic Subsidence Graph.
+       private void porosityToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form16 = new My_Project.Form16();
+           Form16.Show();
+       }
+       private void minMaxFinderToolStripMenuItem1_Click(object sender, EventArgs e)
+       {
+           Form Form17 = new My_Project.Form17();
+           Form17.Show();
+       }
 
-        private void rMSVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form18 = new My_Project.Form18();
-            Form18.Show();
-        }
+       private void rMSVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form18 = new My_Project.Form18();
+           Form18.Show();
+       }
 
-        private void waterSaturationHydrocarbonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form19 = new My_Project.Form19();
-            Form19.Show();
-        }
+       private void waterSaturationHydrocarbonToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form19 = new My_Project.Form19();
+           Form19.Show();
+       }
 
-        private void dSurveyPointCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form20 = new My_Project.Form20();
-            Form20.Show();
-        }
+       private void dSurveyPointCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form20 = new My_Project.Form20();
+           Form20.Show();
+       }
 
-        private void rMSVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form21 = new My_Project.Form21();
-            Form21.Show();
-        }
+       private void rMSVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form21 = new My_Project.Form21();
+           Form21.Show();
+       }
 
-        private void intervalVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form22 = new My_Project.Form22();
-            Form22.Show();
-        }
+       private void intervalVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form22 = new My_Project.Form22();
+           Form22.Show();
+       }
 
-        private void rescaleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form23 = new My_Project.Form23();
-            Form23.Show();
-        }
+       private void rescaleToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form23 = new My_Project.Form23();
+           Form23.Show();
+       }
 
-        private void aVGVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form24 = new My_Project.Form24();
-            Form24.Show();
-        }
-        private void intervalVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form25 = new My_Project.Form25();
-            Form25.Show();
-        }
+       private void aVGVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form24 = new My_Project.Form24();
+           Form24.Show();
+       }
+       private void intervalVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form25 = new My_Project.Form25();
+           Form25.Show();
+       }
         
-        private void aVGVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Form Form26 = new My_Project.Form26();
-            //Form26.Show();
-        }
+       private void aVGVelocitiesMultipleToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           //Form Form26 = new My_Project.Form26();
+           //Form26.Show();
+       }
 
-        private void extractTimeFromHorizonToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form27 = new My_Project.Form27();
-            Form27.Show();
+       private void extractTimeFromHorizonToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form27 = new My_Project.Form27();
+           Form27.Show();
 
-        }
+       }
 
-        private void timeDepthChartsKingdomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form Form28 = new My_Project.Form28();
-            Form28.Show();
+       private void timeDepthChartsKingdomToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+           Form Form28 = new My_Project.Form28();
+           Form28.Show();
 
-        }*/
+       }*/
 
         
 
