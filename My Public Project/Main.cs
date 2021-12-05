@@ -456,7 +456,13 @@ namespace My_Project
             Form Form5 = new My_Project.Form5();
             Form5.Show();
         }
-       
+
+        private void timeDepthChartsKingdomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form28 = new My_Project.Form28();
+            Form28.Show();
+        }
+        
          
        
         /*
@@ -565,12 +571,7 @@ namespace My_Project
 
        }
 
-       private void timeDepthChartsKingdomToolStripMenuItem_Click(object sender, EventArgs e)
-       {
-           Form Form28 = new My_Project.Form28();
-           Form28.Show();
-
-       }*/
+       */
 
         
 

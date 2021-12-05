@@ -86,6 +86,10 @@
     <Compile Include="Time Depth Charts - Depth.Designer.cs">
       <DependentUpon>Time Depth Charts - Depth.cs</DependentUpon>
     </Compile>
+    <Compile Include="Time Depth Charts - Kingdom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time Depth Charts - Kingdom.Designer.cs" />
     <Compile Include="Time Depth Charts - Time.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +134,7 @@
     <EmbeddedResource Include="Time Depth Charts - Depth.resx">
       <DependentUpon>Time Depth Charts - Depth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Time Depth Charts - Kingdom.resx" />
     <EmbeddedResource Include="Time Depth Charts - Time.resx">
       <DependentUpon>Time Depth Charts - Time.cs</DependentUpon>
     </EmbeddedResource>
