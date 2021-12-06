@@ -462,6 +462,13 @@ namespace My_Project
             Form Form28 = new My_Project.Form28();
             Form28.Show();
         }
+
+        private void minMaxFinderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form Form17 = new My_Project.Form17();
+            Form17.Show();
+        }
+        
         
          
        
@@ -505,11 +512,7 @@ namespace My_Project
            Form Form16 = new My_Project.Form16();
            Form16.Show();
        }
-       private void minMaxFinderToolStripMenuItem1_Click(object sender, EventArgs e)
-       {
-           Form Form17 = new My_Project.Form17();
-           Form17.Show();
-       }
+       
 
        private void rMSVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
        {

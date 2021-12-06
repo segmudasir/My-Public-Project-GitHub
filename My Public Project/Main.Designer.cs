@@ -404,6 +404,7 @@
             this.minMaxFinderToolStripMenuItem1.Name = "minMaxFinderToolStripMenuItem1";
             this.minMaxFinderToolStripMenuItem1.Size = new System.Drawing.Size(243, 22);
             this.minMaxFinderToolStripMenuItem1.Text = "Min Max Finder";
+            this.minMaxFinderToolStripMenuItem1.Click += new System.EventHandler(this.minMaxFinderToolStripMenuItem1_Click);
             // 
             // porosityToolStripMenuItem
             // 

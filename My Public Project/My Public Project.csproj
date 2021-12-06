@@ -78,6 +78,10 @@
     <Compile Include="MD-Subsea.designer.cs">
       <DependentUpon>MD-Subsea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Min Max Finder.cs" />
+    <Compile Include="Min Max Finder.designer.cs">
+      <DependentUpon>Min Max Finder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Time Depth Charts - Depth.cs">
@@ -120,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MD-Subsea.resx">
       <DependentUpon>MD-Subsea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Min Max Finder.resx">
+      <DependentUpon>Min Max Finder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
