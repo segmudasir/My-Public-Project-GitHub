@@ -411,6 +411,7 @@
             this.porosityToolStripMenuItem.Name = "porosityToolStripMenuItem";
             this.porosityToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.porosityToolStripMenuItem.Text = "Porosity";
+            this.porosityToolStripMenuItem.Click += new System.EventHandler(this.porosityToolStripMenuItem_Click);
             // 
             // waterSaturationHydrocarbonToolStripMenuItem
             // 

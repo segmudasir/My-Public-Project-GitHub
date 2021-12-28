@@ -468,6 +468,12 @@ namespace My_Project
             Form Form17 = new My_Project.Form17();
             Form17.Show();
         }
+
+        private void porosityToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form16 = new My_Project.Form16();
+            Form16.Show();
+        }
         
         
          

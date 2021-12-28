@@ -82,6 +82,12 @@
     <Compile Include="Min Max Finder.designer.cs">
       <DependentUpon>Min Max Finder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Porosity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Porosity.designer.cs">
+      <DependentUpon>Porosity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Time Depth Charts - Depth.cs">
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Min Max Finder.resx">
       <DependentUpon>Min Max Finder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Porosity.resx">
+      <DependentUpon>Porosity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
