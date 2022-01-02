@@ -26,7 +26,7 @@ namespace My_Project
             formheight = this.Height;
             formwidth = this.Width;
             spanellocationx = 5;
-            spanellocationy = (formheight * 9 / 100);
+            spanellocationy = ((formheight * 9) / 100);
             spanelsizex = 55;
             spanelsizey = (formheight * 81 / 100);
             locationx = 60;
