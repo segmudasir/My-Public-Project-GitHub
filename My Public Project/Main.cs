@@ -451,6 +451,8 @@ namespace My_Project
             Form13.Show();
         }
 
+        
+
         private void TimeDepthChartsDepthToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form5 = new My_Project.Form5();
@@ -481,6 +483,12 @@ namespace My_Project
             Form19.Show();
         }
 
+        private void rescaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form23 = new My_Project.Form23();
+            Form23.Show();
+        }
+        
 
         /*
 
@@ -545,11 +553,7 @@ namespace My_Project
            Form22.Show();
        }
 
-       private void rescaleToolStripMenuItem_Click(object sender, EventArgs e)
-       {
-           Form Form23 = new My_Project.Form23();
-           Form23.Show();
-       }
+       
 
        private void aVGVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
        {

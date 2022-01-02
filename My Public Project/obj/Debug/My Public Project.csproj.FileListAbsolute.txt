@@ -30,3 +30,4 @@ C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form19.resources
+C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form23.resources

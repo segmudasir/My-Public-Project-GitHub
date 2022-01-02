@@ -425,6 +425,7 @@
             this.rescaleToolStripMenuItem.Name = "rescaleToolStripMenuItem";
             this.rescaleToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.rescaleToolStripMenuItem.Text = "Rescale";
+            this.rescaleToolStripMenuItem.Click += new System.EventHandler(this.rescaleToolStripMenuItem_Click);
             // 
             // groupBox2
             // 
