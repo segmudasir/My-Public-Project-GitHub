@@ -11,33 +11,30 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace My_Project
 {
-    public partial class Form16 : Form
+    public partial class Form19 : Form
     {
         int formheight;
         int formwidth;
-        int counter=0;       
+        int counter=0;
         int Chartlocationx, Chartlocationy, Chartsizex, Chartsizey, ChartcolorR, ChartcolorG, ChartcolorB;
         List<float> Depth = new List<float>();
-        List<float> Step_Depth = new List<float>();
-        List<float> GR = new List<float>();
-        List<float> VSH_decimal = new List<float>();
-        List<float> RHOB = new List<float>();
-        List<float> NPHI2 = new List<float>();
-        List<float> NPHI = new List<float>();
-        List<float> NPHI_Decimal = new List<float>();
-        List<float> DPHI = new List<float>();
-        List<float> DPHI_Decimal = new List<float>();
-        List<float> Total_Porosity_Decimal = new List<float>();
-        List<float> Total_Porosity = new List<float>();
+        List<float> RT = new List<float>();
+        List<float> Effective_Porosity2 = new List<float>();
         List<float> Effective_Porosity = new List<float>();
-        List<float> Step_Total_Porosity = new List<float>();
-        List<float> Step_Effective_Porosity = new List<float>();
-
+        List<float> Ratio = new List<float>();
+        List<double> SW = new List<double>();
+        List<float> Water_saturation = new List<float>();
+        List<float> Water_saturation_Percentage = new List<float>();
+        List<float> Hydrocarbon_saturation_Percentage = new List<float>();
+        List<float> Step_Depth = new List<float>();
+        List<float> Step_Water_saturation_Percentage = new List<float>();
+        List<float> Step_Hydrocarbon_saturation_Percentage = new List<float>();
+       
         public Chart Chart1;
         public Series Series1;
         public Series Series2;
         public Title Title1;        
-        public Form16()
+        public Form19()
         {
             InitializeComponent();
             formheight = this.Height;
@@ -45,22 +42,20 @@ namespace My_Project
             //textBox1.Text = formheight.ToString();
             //textBox2.Text = formwidth.ToString();
             dataGridView1.Columns[0].HeaderText = "Depth";
-            dataGridView1.Columns[1].HeaderText = "GR";
-            dataGridView1.Columns[2].HeaderText = "RHOB";
-            dataGridView1.Columns[3].HeaderText = "NPHI";
-            dataGridView2.Columns[0].HeaderText = "E.Porosity";
-            dataGridView2.Columns[1].HeaderText = "T.Porosity";
-            Chartlocationx = (formwidth/100 *40);
+            dataGridView1.Columns[1].HeaderText = "Rt (LLD)";
+            dataGridView1.Columns[2].HeaderText = "Effective Porosity";            
+            dataGridView2.Columns[0].HeaderText = "Sw";           
+            Chartlocationx = (formwidth/100 *36);
             Chartlocationy = 66;
-            Chartsizex = (formwidth * 60/100);
+            Chartsizex = (formwidth * 63/100);
             Chartsizey = 520;
-            ChartcolorR = 29;
-            ChartcolorG = 234;
-            ChartcolorB = 210;
+            ChartcolorR = 0;
+            ChartcolorG = 211;
+            ChartcolorB = 230;
 
             Chart1 = GetChart(Chartlocationx, Chartlocationy, Chartsizex, Chartsizey, ChartcolorR, ChartcolorG, ChartcolorB);
             Controls.Add(Chart1);
-            textBox4.Text = 1.ToString(); 
+            textBox4.Text = 1.ToString();
         }
 
         ///////////////////////////////Copy and Paste from Clip board///////////////////////////////////////////////
@@ -100,47 +95,7 @@ namespace My_Project
                     }
                 }
             }
-        }
-
-        ///////////////////////////////Copy and Paste from Clip board///////////////////////////////////////////////
-        private void dataGridView2_KeyUp(object sender, KeyEventArgs e)
-        {
-            //if user clicked Shift+Ins or Ctrl+V (paste from clipboard)
-            if ((e.Shift && e.KeyCode == Keys.Insert) || (e.Control && e.KeyCode == Keys.V))
-            {
-                char[] rowSplitter = { '\r', '\n' };
-                char[] columnSplitter = { '\t' };
-                //get the text from clipboard
-                IDataObject dataInClipboard = Clipboard.GetDataObject();
-                string stringInClipboard = (string)dataInClipboard.GetData(DataFormats.Text);
-                //split it into lines
-                string[] rowsInClipboard = stringInClipboard.Split(rowSplitter, StringSplitOptions.RemoveEmptyEntries);
-                //get the row and column of selected cell in grid
-                int r = dataGridView2.SelectedCells[0].RowIndex;
-                int c = dataGridView2.SelectedCells[0].ColumnIndex;
-                //add rows into grid to fit clipboard lines
-                if (dataGridView2.Rows.Count < (r + rowsInClipboard.Length))
-                {
-                    dataGridView2.Rows.Add(r + rowsInClipboard.Length - dataGridView2.Rows.Count + 1);
-                }
-                // loop through the lines, split them into cells and place the values in the corresponding cell.
-                for (int iRow = 0; iRow < rowsInClipboard.Length; iRow++)
-                {
-                    //split row into cell values
-                    string[] valuesInRow = rowsInClipboard[iRow].Split(columnSplitter);
-                    //cycle through cell values
-                    for (int iCol = 0; iCol < valuesInRow.Length; iCol++)
-                    {
-                        //assign cell value, only if it within columns of the grid
-                        if (dataGridView2.ColumnCount - 1 >= c + iCol)
-                        {
-                            dataGridView2.Rows[r + iRow].Cells[c + iCol].Value = valuesInRow[iCol];
-                        }
-                    }
-                }
-            }
-        }
-
+        }         
         /////////////////////////////////////Main Ends - Chart General////////////////////////////////////////////////////////
         private Chart GetChart(int locationx, int locationy, int sizex, int sizey, int colorR, int colorG, int colorB)
         {
@@ -157,12 +112,12 @@ namespace My_Project
             chartArea.AxisY.IsStartedFromZero = true;
             chartArea.AxisX.Title = "Depth (meter)";
             chartArea.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F); 
-            chartArea.AxisY.Title = "Porosity (%age)";           
+            chartArea.AxisY.Title = "Water Saturation & Hydrocarbon Saturation (%age)";           
             chartArea.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);            
             chartArea.AxisY.LabelStyle.Enabled = true;
-            colorR = 0;
-            colorG = 191;
-            colorB = 255;
+            //colorR = 255;
+            //colorG = 191;
+            //colorB = 255;
             //chartArea.BackColor = Color.FromArgb(((int)(((byte)(colorR)))), ((int)(((byte)(colorG)))), ((int)(((byte)(colorB))))); 
             chartArea.Name = "ChartArea1";
             chartArea.InnerPlotPosition.Auto = false;
@@ -180,8 +135,6 @@ namespace My_Project
             chart.Legends.Add(Legend1);
             return chart;
         }
-
-
         private Series GetSeries(Chart chart)
         {
             var series = new Series();
@@ -194,167 +147,127 @@ namespace My_Project
             //chart.Series["Series"].MarkerSize = 6;
             return series;
         }
-
-        private Title GetChartTitle(Chart chart, String ChartName, int colorR, int colorG, int colorB)
+        private Title GetChartTitle(Chart chart, String ChartName)
         {
             var title1 = new Title();
-            //title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(colorR)))), ((int)(((byte)(colorG)))), ((int)(((byte)(colorB)))));
-            //title1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DottedDiamond;
+           // title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(colorR)))), ((int)(((byte)(colorG)))), ((int)(((byte)(colorB)))));
+           // title1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DottedDiamond;
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             title1.Text = ChartName;
             title1.Position.Auto = false;
             title1.Position.Height = 8F;
-            title1.Position.Width = 30F;
-            title1.Position.X = 30F;
-            title1.Position.Y = 3F;            
+            title1.Position.Width = 40F;
+            title1.Position.X = 20F;
+            title1.Position.Y = 3F;
             chart.Titles.Add(title1);
             return title1;
         }
-        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-       
-       
-       
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////       
         private void button1_Click(object sender, EventArgs e)
         {
+            String Chartname;
+            if (Chart1.Titles.Count == 1)
+            {
+                Chart1.Titles.RemoveAt(0);
+            }
             counter = 0;
             dataGridView2.Rows.Clear();
-
-            //List Clearing
             Depth.Clear();
-            GR.Clear();
-            RHOB.Clear();
-            NPHI2.Clear();
-            NPHI.Clear();
-            VSH_decimal.Clear();
-            DPHI_Decimal.Clear();
-            DPHI.Clear();
-            Total_Porosity_Decimal.Clear();
-            Total_Porosity.Clear();
-            
+            RT.Clear();
+            SW.Clear();
+            Ratio.Clear();
+            Effective_Porosity2.Clear();
             Effective_Porosity.Clear();
-            
-                                              
+            Water_saturation.Clear();
+            Water_saturation_Percentage.Clear();
+            Hydrocarbon_saturation_Percentage.Clear();
+            Step_Depth.Clear();
+            Step_Water_saturation_Percentage.Clear();
+            Step_Hydrocarbon_saturation_Percentage.Clear();
+                                                                                       
             while (dataGridView1.Rows[counter].Cells[0].Value != null)
             {
                 Depth.Add(float.Parse((dataGridView1.Rows[counter].Cells[0].Value).ToString()));
-                GR.Add(float.Parse((dataGridView1.Rows[counter].Cells[1].Value).ToString()));
-                RHOB.Add(float.Parse((dataGridView1.Rows[counter].Cells[2].Value).ToString()));
-                NPHI2.Add(float.Parse((dataGridView1.Rows[counter].Cells[3].Value).ToString()));
+                RT.Add(float.Parse((dataGridView1.Rows[counter].Cells[1].Value).ToString()));
+                Effective_Porosity2.Add(float.Parse((dataGridView1.Rows[counter].Cells[2].Value).ToString()));                
                 counter++;
             }
-                                          
-            float GRMax = float.Parse(textBox2.Text);
-            float GRMin = float.Parse(textBox3.Text);
-
+                       
+            float Rw = float.Parse(textBox2.Text);
             for (int i = 0; i < counter; i++)
             {
-                float tempvsh = ((GR[i]-GRMin)/(GRMax-GRMin));
-                VSH_decimal.Add(tempvsh);
-            }            
-
-            for (int i = 0; i < counter; i++)
-            {
-                float tempdphi = ((2.65F - RHOB[i]) / (2.65F - 1.03F));
-                DPHI_Decimal.Add(tempdphi);
-            }
-
-            for (int i = 0; i < counter; i++)
-            {
-                float temp2 =  (DPHI_Decimal[i] * 100);
-                DPHI.Add(temp2);
+                float temp = Rw/(RT[i]);
+                Ratio.Add(temp);
             }
 
             //Conversion of NPHI Percentage into decimal to be used in forumulae//
             if (radioButton1.Checked == true)
+            {
+                for (int i = 0; i < counter; i++)
                 {
-                    for (int i = 0; i < counter; i++)
-                    {
-                        float temp = NPHI2[i] / 100;
-                        NPHI.Add(temp);
-                    }
+                    float temp = Effective_Porosity2[i] / 100;
+                    Effective_Porosity.Add(temp);
                 }
-                else
+            }
+            else
+            {
+                for (int i = 0; i < counter; i++)
                 {
-                    for (int i = 0; i < counter; i++)
-                    {
-                        float temp = NPHI2[i];
-                        NPHI.Add(temp);
-                    }
+                    float temp = Effective_Porosity2[i];
+                    Effective_Porosity.Add(temp);
                 }
-            
-            for (int i = 0; i < counter; i++)
-            {
-                float temp = (DPHI_Decimal[i] + NPHI[i])/2;
-                Total_Porosity_Decimal.Add(temp);
             }
 
             for (int i = 0; i < counter; i++)
             {
-                float temp = (Total_Porosity_Decimal[i] *100);
-                Total_Porosity.Add(temp);
+                double temp = Math.Sqrt((1 / (Effective_Porosity[i] * Effective_Porosity[i])) * Ratio[i]);
+                SW.Add(temp);
+            }
+            //Double to float values converison
+            for (int i = 0; i < counter; i++)
+            {
+                float temp = (float)SW[i];
+                Water_saturation.Add(temp);
+            }
+            for (int i = 0; i < counter; i++)
+            {
+                float temp =  (Water_saturation[i] * 100);
+                Water_saturation_Percentage.Add(temp);
             }
 
             for (int i = 0; i < counter; i++)
             {
-                float temp4 = (Total_Porosity[i] * (1-VSH_decimal[i]));
-                //temp4 = temp4 * 100;
-                Effective_Porosity.Add(temp4);
+                float temp = (100 - Water_saturation_Percentage[i]);
+                Hydrocarbon_saturation_Percentage.Add(temp);
             }
 
             for (int i = 0; i < counter; i++)
             {
-                dataGridView2.Rows.Add(Effective_Porosity[i].ToString(), Total_Porosity[i].ToString());
+                dataGridView2.Rows.Add(Water_saturation_Percentage[i].ToString());
             }
-                           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            String Chartname;
-            if (Chart1.Titles.Count==1)
-            {
-                Chart1.Titles.RemoveAt(0);
-            }
-                
-           
+               
             while (Chart1.Series.Count > 0)
             {
-                Chart1.Series.RemoveAt(0);                
+                Chart1.Series.RemoveAt(0);
             }
 
-            Step_Depth.Clear();
-            Effective_Porosity.Clear();
-            Total_Porosity.Clear();
-            Step_Total_Porosity.Clear();
-            Step_Effective_Porosity.Clear();
-
-            counter = 0;
-            while (dataGridView2.Rows[counter].Cells[0].Value != null)
-            {
-                Effective_Porosity.Add(float.Parse((dataGridView2.Rows[counter].Cells[0].Value).ToString()));
-                Total_Porosity.Add(float.Parse((dataGridView2.Rows[counter].Cells[1].Value).ToString()));               
-                counter++;
-            }
             int countnew = 0;
             int markerstep = int.Parse(textBox4.Text);
             for (int i = 0; i < counter; i+=markerstep)
             {
                 Step_Depth.Add(Depth[i]);
-                Step_Effective_Porosity.Add(Effective_Porosity[i]);
-                Step_Total_Porosity.Add(Total_Porosity[i]);
+                Step_Water_saturation_Percentage.Add(Water_saturation_Percentage[i]);
+                Step_Hydrocarbon_saturation_Percentage.Add(Hydrocarbon_saturation_Percentage[i]);                
                 countnew++;
             }
 
             Chartname = (textBox1.Text);
-            ChartcolorR = 0;
-            ChartcolorG = 220;
-            ChartcolorB = 200;
-            
-            Title1 = GetChartTitle(Chart1, Chartname, ChartcolorR, ChartcolorG, ChartcolorB);
-            Series1 = GetSeries(Chart1);            
+                  
+            Title1 = GetChartTitle(Chart1, Chartname);
+            Series1 = GetSeries(Chart1);
             for (int i = 0; i < countnew; i++)
             {
-                Chart1.Series["Series"].Points.AddXY(Step_Depth[i], Step_Total_Porosity[i]);
+                Chart1.Series["Series"].Points.AddXY(Step_Depth[i], Step_Water_saturation_Percentage[i]);
             }
             //Chart1.ChartAreas[0].AxisY.Interval = 0.2;
             int depthmin = Convert.ToInt32(Step_Depth.Min());
@@ -362,32 +275,23 @@ namespace My_Project
             Chart1.ChartAreas[0].AxisX.Minimum = depthmin;
             Chart1.ChartAreas[0].AxisX.Maximum = depthmax;
             Chart1.ChartAreas[0].AxisX.Interval = (depthmax - depthmax) / 6;
+            Chart1.ChartAreas[0].AxisY.Minimum = 0;
+            Chart1.ChartAreas[0].AxisY.Maximum = 100;
             Chart1.Series["Series"].Color = Color.DarkOrange;
             Chart1.Series["Series"].BorderWidth = 3;
-            Chart1.Series["Series"].Name = "Total Porosity";
+            Chart1.Series["Series"].Name = "Water Saturation %";
 
 
             Series2 = GetSeries(Chart1);
             for (int i = 0; i < countnew; i++)
             {
-                Chart1.Series["Series"].Points.AddXY(Step_Depth[i], Step_Effective_Porosity[i]);
-            }
-            Chart1.Series["Series"].Color = Color.DodgerBlue;
+                Chart1.Series["Series"].Points.AddXY(Step_Depth[i], Step_Hydrocarbon_saturation_Percentage[i]);
+            }                
+            Chart1.Series["Series"].Color = Color.Green;
             Chart1.Series["Series"].BorderWidth = 3;
-            Chart1.Series["Series"].Name = "Effective Porosity";
-             
+            Chart1.Series["Series"].Name = "Hydrocarbon Saturation %";
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            dataGridView2.Rows.Clear();            
-        }
-
         
-
-        
-
-
         
     }
 }

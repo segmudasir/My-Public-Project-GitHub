@@ -444,7 +444,7 @@ namespace My_Project
             Form Form6 = new My_Project.Form6();
             Form6.Show();
         }
-
+        
         private void timeDepthChartsTimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form Form13 = new My_Project.Form13();
@@ -474,10 +474,14 @@ namespace My_Project
             Form Form16 = new My_Project.Form16();
             Form16.Show();
         }
-        
-        
-         
-       
+
+        private void waterSaturationHydrocarbonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form Form19 = new My_Project.Form19();
+            Form19.Show();
+        }
+
+
         /*
 
        private void dBaseMapToolStripMenuItem_Click(object sender, EventArgs e)
@@ -513,11 +517,7 @@ namespace My_Project
            //Form14.Show();
        }
        //Form 15 Extra form added for Tectonic Subsidence Graph.
-       private void porosityToolStripMenuItem_Click(object sender, EventArgs e)
-       {
-           Form Form16 = new My_Project.Form16();
-           Form16.Show();
-       }
+       
        
 
        private void rMSVelocitiesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -525,12 +525,7 @@ namespace My_Project
            Form Form18 = new My_Project.Form18();
            Form18.Show();
        }
-
-       private void waterSaturationHydrocarbonToolStripMenuItem_Click(object sender, EventArgs e)
-       {
-           Form Form19 = new My_Project.Form19();
-           Form19.Show();
-       }
+       
 
        private void dSurveyPointCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
        {
@@ -582,13 +577,13 @@ namespace My_Project
 
        */
 
-        
 
-        
 
-        
 
-               
+
+
+
+
 
     }
 }

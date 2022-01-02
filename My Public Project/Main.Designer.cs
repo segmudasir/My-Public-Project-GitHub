@@ -418,6 +418,7 @@
             this.waterSaturationHydrocarbonToolStripMenuItem.Name = "waterSaturationHydrocarbonToolStripMenuItem";
             this.waterSaturationHydrocarbonToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.waterSaturationHydrocarbonToolStripMenuItem.Text = "Water / Hydrocarbon Saturation";
+            this.waterSaturationHydrocarbonToolStripMenuItem.Click += new System.EventHandler(this.waterSaturationHydrocarbonToolStripMenuItem_Click);
             // 
             // rescaleToolStripMenuItem
             // 

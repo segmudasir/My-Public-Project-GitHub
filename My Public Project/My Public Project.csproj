@@ -126,6 +126,12 @@
     <Compile Include="TVD Seismic.designer.cs">
       <DependentUpon>TVD Seismic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Water Saturation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Water Saturation.Designer.cs">
+      <DependentUpon>Water Saturation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Linear Interpolation.resx">
       <DependentUpon>Linear Interpolation.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TVD Seismic.resx">
       <DependentUpon>TVD Seismic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Water Saturation.resx">
+      <DependentUpon>Water Saturation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -14,7 +14,6 @@ C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.pdb
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\bin\Debug\My Public Project.exe
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\bin\Debug\My Public Project.pdb
-C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.csprojResolveAssemblyReference.cache
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Main.resources
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form1.resources
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Properties.Resources.resources
@@ -28,3 +27,6 @@ C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Time Depth Charts - Kingdom.resources
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form17.resources
 C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form16.resources
+C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My Public Project.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\My Visual Studio Projects\GitHub\My-Public-Project-GitHub\My Public Project\obj\Debug\My_Project.Form19.resources
